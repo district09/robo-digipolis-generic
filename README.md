@@ -58,18 +58,15 @@ digipolis:database-backup          Command digipolis:database-backup.
 digipolis:database-restore         Command digipolis:database-restore.
 digipolis:deploy-generic           Build a generic site and push it to the
 servers.
-digipolis:download-backup-generic  Download a backup of files
-(sites/default/files) and database.
-digipolis:init-generic-remote      Install or update a drupal 8 remote site.
-digipolis:install-generic          Install the D8 site in the current folder.
+digipolis:download-backup-generic  Download a backup of files and database.
+digipolis:init-generic-remote      Install or update a remote site.
+digipolis:install-generic          Install the site in the current folder.
 digipolis:package-project          Package a directory into an archive.
 digipolis:push-package             Command digipolis:push-package.
-digipolis:restore-backup-generic   Restore a backup of files
-(sites/default/files) and database.
+digipolis:restore-backup-generic   Restore a backup of files and database.
 digipolis:sync-generic             Sync the database and files between two
 generic sites.
-digipolis:update-generic           Executes D8 database updates of the D8 site
+digipolis:update-generic           Executes database updates of the site
 in the current folder.
-digipolis:upload-backup-generic    Upload a backup of files
-(sites/default/files) and database to a server.
+digipolis:upload-backup-generic    Upload a files and database backup to a server.
 ```

@@ -2,11 +2,12 @@ remote:
   appdir: '/home/[user]/apps/[app]'
   releasesdir: '${remote.appdir}/releases'
   rootdir: '${remote.releasesdir}/[time]'
-  webdir: '${remote.rootdir}/web'
+  webdir: '${remote.rootdir}'
   currentdir: '${remote.appdir}/current'
   configdir: '${remote.appdir}/config'
   filesdir: '${remote.appdir}/files'
   backupsdir: '${remote.appdir}/backups'
+  createbackup: false
   symlinks:
     - '${remote.webdir}:${remote.currentdir}'
   opcache:
