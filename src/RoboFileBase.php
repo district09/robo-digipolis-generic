@@ -35,21 +35,4 @@ class RoboFileBase extends AbstractRoboFile
     {
         return $this->taskExec('echo "Not validating code for generic php projects."');
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function backupTask($worker, AbstractAuth $auth, $remote, $opts = [])
-    {
-        return $this->collectionBuilder();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function restoreBackupTask($worker, AbstractAuth $auth, $remote, $opts = [])
-    {
-        return $this->collectionBuilder();
-    }
-
 }
