@@ -5,7 +5,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "digipolisgent/robo-digipolis-helpers": "^1.0",
+        "digipolisgent/robo-digipolis-helpers": "^2.0",
         "digipolisgent/robo-digipolis-code-validation": "^0.1.1"
     },
     "require-dev": {
