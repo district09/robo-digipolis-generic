@@ -8,6 +8,7 @@ use DigipolisGent\Robo\Task\Deploy\Ssh\Auth\AbstractAuth;
 class Generic extends AbstractApp
 {
     use \DigipolisGent\Robo\Task\Deploy\Tasks;
+    use \Robo\Task\Base\Tasks;
 
     protected $siteInstalled = null;
 
