@@ -3,34 +3,18 @@
 namespace DigipolisGent\Robo\Generic\Util\TaskFactory;
 
 use Consolidation\AnnotatedCommand\Output\OutputAwareInterface;
-use Consolidation\Config\ConfigInterface;
-use DigipolisGent\CommandBuilder\CommandBuilder;
-use DigipolisGent\Robo\Drupal8\Traits\Drupal8UtilsTrait;
 use DigipolisGent\Robo\Helpers\DependencyInjection\PropertiesHelperAwareInterface;
 use DigipolisGent\Robo\Helpers\DependencyInjection\RemoteHelperAwareInterface;
 use DigipolisGent\Robo\Helpers\DependencyInjection\Traits\AppTaskFactoryAware;
 use DigipolisGent\Robo\Helpers\DependencyInjection\Traits\PropertiesHelperAware;
 use DigipolisGent\Robo\Helpers\DependencyInjection\Traits\RemoteHelperAware;
-use DigipolisGent\Robo\Helpers\Util\PropertiesHelper;
-use DigipolisGent\Robo\Helpers\Util\RemoteHelper;
 use DigipolisGent\Robo\Helpers\Util\TaskFactory\AbstractApp;
 use DigipolisGent\Robo\Task\Deploy\Ssh\Auth\AbstractAuth;
-use League\Container\DefinitionContainerInterface;
-use Robo\Collection\CollectionBuilder;
+use Robo\Common\IO;
 use Symfony\Component\Console\Input\InputAwareInterface;
 
-class Generic extends AbstractApp implements PropertiesHelperAwareInterface, RemoteHelperAwareInterface, InputAwareInterface, OutputAwareInterface
+class Generic extends AbstractApp
 {
-
-    use RemoteHelperAware;
-    use \DigipolisGent\Robo\Task\Deploy\Tasks;
-    use AppTaskFactoryAware;
-    use Drupal8UtilsTrait;
-    use PropertiesHelperAware;
-    use \Boedah\Robo\Task\Drush\loadTasks;
-    use \Robo\Common\IO;
-
-
     /**
      * Install the site in the current folder.
      *
