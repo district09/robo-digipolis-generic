@@ -7,6 +7,10 @@ use DigipolisGent\Robo\Task\Deploy\Ssh\Auth\AbstractAuth;
 
 class Generic extends AbstractApp
 {
+    use \DigipolisGent\Robo\Task\Deploy\Tasks;
+
+    protected $siteInstalled = null;
+
     /**
      * Install the site in the current folder.
      *
