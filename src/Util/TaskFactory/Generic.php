@@ -30,24 +30,6 @@ class Generic extends AbstractApp implements PropertiesHelperAwareInterface, Rem
     use \Boedah\Robo\Task\Drush\loadTasks;
     use \Robo\Common\IO;
 
-    protected $siteInstalled = null;
-
-    public function __construct(ConfigInterface $config, PropertiesHelper $propertiesHelper, RemoteHelper $remoteHelper) {
-        parent::__construct($config);
-        $this->setPropertiesHelper($propertiesHelper);
-        $this->setRemoteHelper($remoteHelper);
-    }
-
-    public static function create(DefinitionContainerInterface $container) {
-      $object = new static(
-        $container->get('config'),
-        $container->get(PropertiesHelper::class),
-        $container->get(RemoteHelper::class)
-      );
-      $object->setBuilder(CollectionBuilder::create($container, $object));
-
-      return $object;
-    }
 
     /**
      * Install the site in the current folder.
