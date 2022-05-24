@@ -2,16 +2,8 @@
 
 namespace DigipolisGent\Robo\Generic\Util\TaskFactory;
 
-use Consolidation\AnnotatedCommand\Output\OutputAwareInterface;
-use DigipolisGent\Robo\Helpers\DependencyInjection\PropertiesHelperAwareInterface;
-use DigipolisGent\Robo\Helpers\DependencyInjection\RemoteHelperAwareInterface;
-use DigipolisGent\Robo\Helpers\DependencyInjection\Traits\AppTaskFactoryAware;
-use DigipolisGent\Robo\Helpers\DependencyInjection\Traits\PropertiesHelperAware;
-use DigipolisGent\Robo\Helpers\DependencyInjection\Traits\RemoteHelperAware;
 use DigipolisGent\Robo\Helpers\Util\TaskFactory\AbstractApp;
 use DigipolisGent\Robo\Task\Deploy\Ssh\Auth\AbstractAuth;
-use Robo\Common\IO;
-use Symfony\Component\Console\Input\InputAwareInterface;
 
 class Generic extends AbstractApp
 {
@@ -83,4 +75,10 @@ class Generic extends AbstractApp
         $this->siteInstalled = $result->wasSuccessful();
         return $this->siteInstalled;
     }
+
+    public function clearCacheTask($worker, $auth, $remote)
+    {
+        return false;
+    }
+
 }
