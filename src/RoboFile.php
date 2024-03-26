@@ -1,12 +1,8 @@
 <?php
 
-/**
- * Example robo file.
- */
+use Robo\Tasks;
 
-use DigipolisGent\Robo\Generic\RoboFileBase;
-
-class RoboFile extends RoboFileBase
+class RoboFile extends Tasks
 {
 
 }
